@@ -1,0 +1,46 @@
+{
+  "name": "dan_lambda10",
+  "best_epoch": 7,
+  "best_val_mean_macro_f1": 0.91017719106431,
+  "epochs_run": 12,
+  "steps_per_epoch": 203,
+  "total_steps_run": 2436,
+  "wall_time_s": 226.9,
+  "config": {
+    "seed": 6304,
+    "device": "cuda",
+    "data": {
+      "parquet": "data/pacs/pacs.parquet",
+      "splits": "shared/splits/pacs_sketch_seed6304.json",
+      "n_classes": 7,
+      "sources": [
+        "photo",
+        "art_painting",
+        "cartoon"
+      ],
+      "target": "sketch"
+    },
+    "train": {
+      "per_domain_batch": 8,
+      "target_batch": 24,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "max_epochs": 30,
+      "patience": 5,
+      "num_workers": 4,
+      "log_every": 20,
+      "bn_policy": "frozen_running_stats"
+    },
+    "results_root": "task2/results",
+    "name": "dan_lambda10",
+    "method": {
+      "type": "dan",
+      "lambda_mmd": 10.0,
+      "kernel_factors": [
+        0.5,
+        1.0,
+        2.0
+      ]
+    }
+  }
+}

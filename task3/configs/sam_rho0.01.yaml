@@ -1,0 +1,2 @@
+name: sam_rho0.01
+method: {type: sam, rho: 0.01}

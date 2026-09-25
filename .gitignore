@@ -1,0 +1,18 @@
+# datasets and large artifacts
+/data/
+.venv/
+__pycache__/
+*.pyc
+wandb/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+# cached features/logits (large binary)
+task4/cache/*.npz
+task4/cache/*.npy
+task1/results/features/
+# generated images are reproducible from scripts; keep a few examples only
+task1/results/images/
+!task1/results/images/examples/
+*.log

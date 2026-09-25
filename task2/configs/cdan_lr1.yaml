@@ -1,0 +1,2 @@
+name: cdan_lr1     # spec-exact counterpart of cdan.yaml (discriminator lr = shared lr)
+method: {type: cdan, disc_hidden: 256, disc_dropout: 0.5, max_alpha: 1.0, domain_weight: 1.0, extra_lr_mult: 1}

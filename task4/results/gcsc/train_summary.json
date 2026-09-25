@@ -1,0 +1,36 @@
+{
+  "name": "gcsc",
+  "best_epoch": 99,
+  "best_val_acc": 0.957,
+  "epochs": 100,
+  "wall_time_s": 1186.9,
+  "config": {
+    "seed": 6304,
+    "device": "cuda",
+    "data": {
+      "root": "data",
+      "split": "task4/results/cifar10_split_seed6304.json",
+      "n_classes": 10,
+      "num_workers": 6
+    },
+    "train": {
+      "optimizer": "sgd",
+      "lr": 0.1,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "schedule": "cosine",
+      "epochs": 100,
+      "batch_size": 128,
+      "amp": true,
+      "randaugment": true,
+      "randaugment_num_ops": 2,
+      "randaugment_magnitude": 9
+    },
+    "results_root": "task4/results",
+    "checkpoint_rule": "max_cifar10_val_acc",
+    "name": "gcsc",
+    "method": {
+      "type": "gcsc"
+    }
+  }
+}

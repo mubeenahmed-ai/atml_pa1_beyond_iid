@@ -1,0 +1,44 @@
+{
+  "name": "dann",
+  "best_epoch": 5,
+  "best_val_mean_macro_f1": 0.11485402658358362,
+  "epochs_run": 10,
+  "steps_per_epoch": 203,
+  "total_steps_run": 2030,
+  "wall_time_s": 200.7,
+  "config": {
+    "seed": 6304,
+    "device": "cuda",
+    "data": {
+      "parquet": "data/pacs/pacs.parquet",
+      "splits": "shared/splits/pacs_sketch_seed6304.json",
+      "n_classes": 7,
+      "sources": [
+        "photo",
+        "art_painting",
+        "cartoon"
+      ],
+      "target": "sketch"
+    },
+    "train": {
+      "per_domain_batch": 8,
+      "target_batch": 24,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "max_epochs": 30,
+      "patience": 5,
+      "num_workers": 6,
+      "log_every": 20,
+      "bn_policy": "frozen_running_stats"
+    },
+    "results_root": "task2/results",
+    "name": "dann",
+    "method": {
+      "type": "dann",
+      "disc_hidden": 256,
+      "disc_dropout": 0.5,
+      "max_alpha": 1.0,
+      "domain_weight": 1.0
+    }
+  }
+}

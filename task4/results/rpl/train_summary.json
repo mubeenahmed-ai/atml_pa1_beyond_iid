@@ -1,0 +1,36 @@
+{
+  "name": "rpl",
+  "best_epoch": 97,
+  "best_val_acc": 0.9538,
+  "epochs": 100,
+  "wall_time_s": 1212.3,
+  "config": {
+    "seed": 6304,
+    "device": "cuda",
+    "data": {
+      "root": "data",
+      "split": "task4/results/cifar10_split_seed6304.json",
+      "n_classes": 10,
+      "num_workers": 6
+    },
+    "train": {
+      "optimizer": "sgd",
+      "lr": 0.1,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "schedule": "cosine",
+      "epochs": 100,
+      "batch_size": 128,
+      "amp": true,
+      "randaugment": false
+    },
+    "results_root": "task4/results",
+    "checkpoint_rule": "max_cifar10_val_acc",
+    "name": "rpl",
+    "method": {
+      "type": "rpl",
+      "temperature": 1.0,
+      "lambda_open": 0.1
+    }
+  }
+}

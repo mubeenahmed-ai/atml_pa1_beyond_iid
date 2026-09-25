@@ -1,0 +1,2 @@
+name: dann_lr1     # spec-exact: discriminator at the shared lr 1e-4 -> unstable (kept as evidence)
+method: {type: dann, disc_hidden: 256, disc_dropout: 0.5, max_alpha: 1.0, domain_weight: 1.0, extra_lr_mult: 1}

@@ -1,0 +1,26 @@
+{
+  "config": {
+    "epochs": 50,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "patience": 5
+  },
+  "heads": {
+    "resnet50": {
+      "best_val_acc": 0.9790000319480896,
+      "best_epoch": 9,
+      "epochs_run": 14
+    },
+    "vit_b16": {
+      "best_val_acc": 0.9780000448226929,
+      "best_epoch": 15,
+      "epochs_run": 20
+    },
+    "clip_vitb32": {
+      "best_val_acc": 0.9770000576972961,
+      "best_epoch": 15,
+      "epochs_run": 20
+    }
+  }
+}

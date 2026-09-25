@@ -1,0 +1,4 @@
+name: proser
+method: {type: proser, n_dummy: 5, beta: 1.0, gamma: 0.1, mixup_alpha: 2.0}
+init_from: task4/results/vanilla/best.pt
+train: {lr: 1.0e-3, epochs: 50}

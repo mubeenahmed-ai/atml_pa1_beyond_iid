@@ -1,0 +1,572 @@
+{
+  "rows": [
+    {
+      "method": "erm",
+      "photo_acc": 0.9730538922155688,
+      "photo_f1": 0.9675574687345103,
+      "art_painting_acc": 0.9,
+      "art_painting_f1": 0.900724701134725,
+      "cartoon_acc": 0.9445628997867804,
+      "cartoon_f1": 0.9482972439362712,
+      "src_mean_accuracy": 0.9392055973341163,
+      "src_worst_accuracy": 0.9,
+      "src_worst_domain_accuracy": "art_painting",
+      "src_mean_macro_f1": 0.9388598046018356,
+      "src_worst_macro_f1": 0.900724701134725,
+      "src_worst_domain_macro_f1": "art_painting",
+      "source_domain_separability": 0.8704318936877077,
+      "sep_n_per_group": 334,
+      "sharp_loss_val": 0.031795378774404526,
+      "sharp_loss_val_perturbed": 0.21297597885131836,
+      "sharp_delta_sharp": 0.18118059635162354,
+      "sharp_grad_norm": 1.7410367727279663,
+      "sharp_rho": 0.05,
+      "sketch_acc": 0.6823619241537286,
+      "sketch_f1": 0.7137649622163134,
+      "sketch_acc_delta_vs_erm": 0.0
+    },
+    {
+      "method": "sam_rho0.01",
+      "photo_acc": 0.9760479041916168,
+      "photo_f1": 0.9718063817385819,
+      "art_painting_acc": 0.8902439024390244,
+      "art_painting_f1": 0.8923730613524091,
+      "cartoon_acc": 0.9701492537313433,
+      "cartoon_f1": 0.9738041172416985,
+      "src_mean_accuracy": 0.9454803534539948,
+      "src_worst_accuracy": 0.8902439024390244,
+      "src_worst_domain_accuracy": "art_painting",
+      "src_mean_macro_f1": 0.9459945201108965,
+      "src_worst_macro_f1": 0.8923730613524091,
+      "src_worst_domain_macro_f1": "art_painting",
+      "source_domain_separability": 0.8637873754152824,
+      "sep_n_per_group": 334,
+      "sharp_loss_val": 0.12603728473186493,
+      "sharp_loss_val_perturbed": 0.34870445728302,
+      "sharp_delta_sharp": 0.2226671725511551,
+      "sharp_grad_norm": 4.04198694229126,
+      "sharp_rho": 0.05,
+      "sketch_acc": 0.7141766352761517,
+      "sketch_f1": 0.7221171461330433,
+      "sketch_acc_delta_vs_erm": 0.03181471112242307
+    },
+    {
+      "method": "sam",
+      "photo_acc": 0.9670658682634731,
+      "photo_f1": 0.9601648246401723,
+      "art_painting_acc": 0.9317073170731708,
+      "art_painting_f1": 0.9343565829169086,
+      "cartoon_acc": 0.9616204690831557,
+      "cartoon_f1": 0.9663155862484931,
+      "src_mean_accuracy": 0.9534645514732665,
+      "src_worst_accuracy": 0.9317073170731708,
+      "src_worst_domain_accuracy": "art_painting",
+      "src_mean_macro_f1": 0.9536123312685246,
+      "src_worst_macro_f1": 0.9343565829169086,
+      "src_worst_domain_macro_f1": "art_painting",
+      "source_domain_separability": 0.8837209302325582,
+      "sep_n_per_group": 334,
+      "sharp_loss_val": 0.09653500467538834,
+      "sharp_loss_val_perturbed": 0.21039505302906036,
+      "sharp_delta_sharp": 0.11386004835367203,
+      "sharp_grad_norm": 1.898572325706482,
+      "sharp_rho": 0.05,
+      "sketch_acc": 0.7029778569610587,
+      "sketch_f1": 0.7207697267801387,
+      "sketch_acc_delta_vs_erm": 0.020615932807330095
+    },
+    {
+      "method": "sam_rho0.1",
+      "photo_acc": 0.9700598802395209,
+      "photo_f1": 0.9647675071542331,
+      "art_painting_acc": 0.8878048780487805,
+      "art_painting_f1": 0.8852939017567981,
+      "cartoon_acc": 0.9445628997867804,
+      "cartoon_f1": 0.9504459238794537,
+      "src_mean_accuracy": 0.9341425526916939,
+      "src_worst_accuracy": 0.8878048780487805,
+      "src_worst_domain_accuracy": "art_painting",
+      "src_mean_macro_f1": 0.933502444263495,
+      "src_worst_macro_f1": 0.8852939017567981,
+      "src_worst_domain_macro_f1": "art_painting",
+      "source_domain_separability": 0.8039867109634552,
+      "sep_n_per_group": 334,
+      "sharp_loss_val": 0.17223376035690308,
+      "sharp_loss_val_perturbed": 0.2733473777770996,
+      "sharp_delta_sharp": 0.10111361742019653,
+      "sharp_grad_norm": 1.777538537979126,
+      "sharp_rho": 0.05,
+      "sketch_acc": 0.7261389666581828,
+      "sketch_f1": 0.7387681464298028,
+      "sketch_acc_delta_vs_erm": 0.04377704250445413
+    }
+  ],
+  "per_class": {
+    "erm": {
+      "per_class_acc": {
+        "dog": 0.5025906735751295,
+        "elephant": 0.9418918918918919,
+        "giraffe": 0.5245683930942895,
+        "guitar": 0.8421052631578947,
+        "horse": 0.6225490196078431,
+        "house": 0.9125,
+        "person": 0.675
+      },
+      "confusion_matrix": [
+        [
+          388,
+          252,
+          7,
+          0,
+          72,
+          0,
+          53
+        ],
+        [
+          30,
+          697,
+          0,
+          0,
+          1,
+          0,
+          12
+        ],
+        [
+          130,
+          96,
+          395,
+          13,
+          91,
+          0,
+          28
+        ],
+        [
+          0,
+          83,
+          5,
+          512,
+          1,
+          0,
+          7
+        ],
+        [
+          103,
+          194,
+          7,
+          0,
+          508,
+          0,
+          4
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          73,
+          2
+        ],
+        [
+          10,
+          39,
+          2,
+          1,
+          0,
+          0,
+          108
+        ]
+      ],
+      "top_confusions": [
+        {
+          "true": "dog",
+          "pred": "elephant",
+          "count": 252,
+          "frac_of_true": 0.326
+        },
+        {
+          "true": "horse",
+          "pred": "elephant",
+          "count": 194,
+          "frac_of_true": 0.238
+        },
+        {
+          "true": "giraffe",
+          "pred": "dog",
+          "count": 130,
+          "frac_of_true": 0.173
+        },
+        {
+          "true": "horse",
+          "pred": "dog",
+          "count": 103,
+          "frac_of_true": 0.126
+        },
+        {
+          "true": "giraffe",
+          "pred": "elephant",
+          "count": 96,
+          "frac_of_true": 0.127
+        }
+      ]
+    },
+    "sam_rho0.01": {
+      "per_class_acc": {
+        "dog": 0.49093264248704666,
+        "elephant": 0.9013513513513514,
+        "giraffe": 0.7861885790172642,
+        "guitar": 0.9375,
+        "horse": 0.5159313725490197,
+        "house": 0.9875,
+        "person": 0.6125
+      },
+      "confusion_matrix": [
+        [
+          379,
+          176,
+          107,
+          2,
+          66,
+          0,
+          42
+        ],
+        [
+          54,
+          667,
+          13,
+          0,
+          2,
+          0,
+          4
+        ],
+        [
+          49,
+          41,
+          592,
+          9,
+          40,
+          4,
+          18
+        ],
+        [
+          1,
+          32,
+          4,
+          570,
+          0,
+          1,
+          0
+        ],
+        [
+          106,
+          107,
+          145,
+          4,
+          421,
+          14,
+          19
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          79,
+          0
+        ],
+        [
+          8,
+          13,
+          39,
+          0,
+          0,
+          2,
+          98
+        ]
+      ],
+      "top_confusions": [
+        {
+          "true": "dog",
+          "pred": "elephant",
+          "count": 176,
+          "frac_of_true": 0.228
+        },
+        {
+          "true": "horse",
+          "pred": "giraffe",
+          "count": 145,
+          "frac_of_true": 0.178
+        },
+        {
+          "true": "dog",
+          "pred": "giraffe",
+          "count": 107,
+          "frac_of_true": 0.139
+        },
+        {
+          "true": "horse",
+          "pred": "elephant",
+          "count": 107,
+          "frac_of_true": 0.131
+        },
+        {
+          "true": "horse",
+          "pred": "dog",
+          "count": 106,
+          "frac_of_true": 0.13
+        }
+      ],
+      "per_class_delta_vs_baseline": {
+        "dog": -0.011658031088082887,
+        "elephant": -0.04054054054054057,
+        "giraffe": 0.26162018592297476,
+        "guitar": 0.09539473684210531,
+        "horse": -0.10661764705882348,
+        "house": 0.07500000000000007,
+        "person": -0.0625
+      },
+      "most_improved": "giraffe",
+      "most_degraded": "horse"
+    },
+    "sam": {
+      "per_class_acc": {
+        "dog": 0.6217616580310881,
+        "elephant": 0.7391891891891892,
+        "giraffe": 0.4541832669322709,
+        "guitar": 0.9226973684210527,
+        "horse": 0.7340686274509803,
+        "house": 0.925,
+        "person": 0.99375
+      },
+      "confusion_matrix": [
+        [
+          480,
+          57,
+          1,
+          0,
+          91,
+          1,
+          142
+        ],
+        [
+          85,
+          547,
+          0,
+          0,
+          7,
+          0,
+          101
+        ],
+        [
+          95,
+          8,
+          342,
+          1,
+          175,
+          0,
+          132
+        ],
+        [
+          3,
+          2,
+          2,
+          561,
+          0,
+          0,
+          40
+        ],
+        [
+          98,
+          34,
+          3,
+          0,
+          599,
+          0,
+          82
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          74,
+          5
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          159
+        ]
+      ],
+      "top_confusions": [
+        {
+          "true": "giraffe",
+          "pred": "horse",
+          "count": 175,
+          "frac_of_true": 0.232
+        },
+        {
+          "true": "dog",
+          "pred": "person",
+          "count": 142,
+          "frac_of_true": 0.184
+        },
+        {
+          "true": "giraffe",
+          "pred": "person",
+          "count": 132,
+          "frac_of_true": 0.175
+        },
+        {
+          "true": "elephant",
+          "pred": "person",
+          "count": 101,
+          "frac_of_true": 0.136
+        },
+        {
+          "true": "horse",
+          "pred": "dog",
+          "count": 98,
+          "frac_of_true": 0.12
+        }
+      ],
+      "per_class_delta_vs_baseline": {
+        "dog": 0.11917098445595853,
+        "elephant": -0.20270270270270274,
+        "giraffe": -0.07038512616201859,
+        "guitar": 0.08059210526315796,
+        "horse": 0.11151960784313719,
+        "house": 0.012500000000000067,
+        "person": 0.31875
+      },
+      "most_improved": "person",
+      "most_degraded": "elephant"
+    },
+    "sam_rho0.1": {
+      "per_class_acc": {
+        "dog": 0.3860103626943005,
+        "elephant": 0.9243243243243243,
+        "giraffe": 0.5617529880478087,
+        "guitar": 0.9539473684210527,
+        "horse": 0.8455882352941176,
+        "house": 0.8,
+        "person": 0.7125
+      },
+      "confusion_matrix": [
+        [
+          298,
+          212,
+          18,
+          11,
+          216,
+          0,
+          17
+        ],
+        [
+          37,
+          684,
+          1,
+          4,
+          9,
+          0,
+          5
+        ],
+        [
+          78,
+          36,
+          423,
+          63,
+          131,
+          0,
+          22
+        ],
+        [
+          0,
+          21,
+          6,
+          580,
+          0,
+          0,
+          1
+        ],
+        [
+          38,
+          57,
+          11,
+          16,
+          690,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2,
+          11,
+          0,
+          64,
+          0
+        ],
+        [
+          5,
+          27,
+          5,
+          7,
+          2,
+          0,
+          114
+        ]
+      ],
+      "top_confusions": [
+        {
+          "true": "dog",
+          "pred": "horse",
+          "count": 216,
+          "frac_of_true": 0.28
+        },
+        {
+          "true": "dog",
+          "pred": "elephant",
+          "count": 212,
+          "frac_of_true": 0.275
+        },
+        {
+          "true": "giraffe",
+          "pred": "horse",
+          "count": 131,
+          "frac_of_true": 0.174
+        },
+        {
+          "true": "giraffe",
+          "pred": "dog",
+          "count": 78,
+          "frac_of_true": 0.104
+        },
+        {
+          "true": "giraffe",
+          "pred": "guitar",
+          "count": 63,
+          "frac_of_true": 0.084
+        }
+      ],
+      "per_class_delta_vs_baseline": {
+        "dog": -0.11658031088082904,
+        "elephant": -0.01756756756756761,
+        "giraffe": 0.03718459495351922,
+        "guitar": 0.11184210526315796,
+        "horse": 0.2230392156862745,
+        "house": -0.11249999999999993,
+        "person": 0.03749999999999998
+      },
+      "most_improved": "horse",
+      "most_degraded": "dog"
+    }
+  },
+  "baseline": "erm"
+}

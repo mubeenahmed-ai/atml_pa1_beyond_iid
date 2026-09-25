@@ -1,0 +1,5 @@
+name: dann
+# extra_lr_mult: the discriminator (a new, randomly initialised module) uses 10x the shared lr (1e-3).
+# With the shared 1e-4 for everything, AdamW moves the 11M-parameter backbone faster than the 130k-parameter
+# discriminator can respond and, because BN statistics are frozen, the feature norm explodes (see dann_lr1).
+method: {type: dann, disc_hidden: 256, disc_dropout: 0.5, max_alpha: 1.0, domain_weight: 1.0, extra_lr_mult: 10}

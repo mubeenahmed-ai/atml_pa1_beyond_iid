@@ -1,0 +1,3 @@
+name: erm
+method: {type: erm}
+checkpoint: task2/results/source_only/best.pt   # reused unchanged (no retraining)

@@ -1,0 +1,2 @@
+name: dan_lambda0.1
+method: {type: dan, lambda_mmd: 0.1, kernel_factors: [0.5, 1.0, 2.0]}

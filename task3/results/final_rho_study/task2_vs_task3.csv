@@ -1,0 +1,2 @@
+task2_method,task2_sketch_acc,task2_domain_sep(src vs sketch),task3_method,task3_sketch_acc,task3_src_domain_sep(3-way)
+source_only,0.6823619241537286,0.9972527472527472,erm,0.6823619241537286,0.8704318936877077

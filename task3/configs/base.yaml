@@ -1,0 +1,24 @@
+# Identical protocol to task2/configs/base.yaml except results_root. No target loader is ever built
+# in Task 3 training: every Task 3 method has needs_target = False.
+seed: 6304
+device: cuda
+data:
+  parquet: data/pacs/pacs.parquet
+  splits: shared/splits/pacs_sketch_seed6304.json
+  n_classes: 7
+  sources: [photo, art_painting, cartoon]
+  target: sketch
+train:
+  per_domain_batch: 8
+  target_batch: 24
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  max_epochs: 30
+  patience: 5
+  num_workers: 4
+  log_every: 20
+  bn_policy: frozen_running_stats
+results_root: task3/results
+diagnostics:
+  sharpness_rho: 0.05
+  sharpness_batch_per_domain: 32

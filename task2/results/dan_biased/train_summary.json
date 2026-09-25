@@ -1,0 +1,46 @@
+{
+  "name": "dan",
+  "best_epoch": 6,
+  "best_val_mean_macro_f1": 0.9470388755443541,
+  "epochs_run": 11,
+  "steps_per_epoch": 203,
+  "total_steps_run": 2233,
+  "wall_time_s": 223.6,
+  "config": {
+    "seed": 6304,
+    "device": "cuda",
+    "data": {
+      "parquet": "data/pacs/pacs.parquet",
+      "splits": "shared/splits/pacs_sketch_seed6304.json",
+      "n_classes": 7,
+      "sources": [
+        "photo",
+        "art_painting",
+        "cartoon"
+      ],
+      "target": "sketch"
+    },
+    "train": {
+      "per_domain_batch": 8,
+      "target_batch": 24,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "max_epochs": 30,
+      "patience": 5,
+      "num_workers": 6,
+      "log_every": 20,
+      "bn_policy": "frozen_running_stats"
+    },
+    "results_root": "task2/results",
+    "name": "dan",
+    "method": {
+      "type": "dan",
+      "lambda_mmd": 1.0,
+      "kernel_factors": [
+        0.5,
+        1.0,
+        2.0
+      ]
+    }
+  }
+}

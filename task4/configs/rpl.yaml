@@ -1,0 +1,2 @@
+name: rpl
+method: {type: rpl, temperature: 1.0, lambda_open: 0.1}

@@ -1,0 +1,59 @@
+# Task 1 - Inductive biases and feature representations (STL-10)
+seed: 6304
+dataset: stl10
+data_root: data/stl10_hf          # HuggingFace mirror of the labelled STL-10 splits (parquet)
+image_size: 224                    # common RGB canvas on which every intervention is applied
+results_dir: task1/results
+device: cuda
+
+split:
+  val_fraction: 0.2                # stratified 80/20 split of the official training partition
+  eval_subset_size: 500            # class-balanced subset of the official test partition (50 / class)
+
+head:                              # linear classifier head on frozen features
+  epochs: 50
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  batch_size: 256
+  patience: 5                      # early stopping on validation accuracy
+
+clip:
+  model: ViT-B-32
+  pretrained: openai
+  prompt: "a photo of a {}."
+
+color:
+  extra_intervention: hue_rotation
+  hue_shift_degrees: 120           # fixed hue rotation; +120 deg maps R->G, G->B, B->R
+
+translation:
+  displacements: [0, 8, 16, 32]
+  directions: [up, down, left, right]
+
+patch_shuffle:
+  grid: 4
+
+cue_conflict:
+  style_strength: 1.0              # AdaIN alpha
+  class_pairs:                     # unordered pairs; both directions are generated
+    - [airplane, cat]
+    - [car, dog]
+    - [ship, horse]
+    - [truck, bird]
+    - [deer, monkey]
+    - [bird, cat]
+  per_direction: 25                # candidates generated per (pair, direction) -> 6*2*25 = 300 candidates
+  rejection:                       # visual rule, decided BEFORE any model evaluation
+    min_pixel_std: 0.05            # reject collapsed / flat outputs
+    min_edge_corr: 0.30            # shape retained: Sobel-magnitude corr(content, stylised)
+    min_style_gain: 0.0            # texture adopted: stylised colour/std stats closer to style than to content
+  weights:
+    vgg: data/weights/adain_vgg_normalised.pth
+    decoder: data/weights/adain_decoder.pth
+
+representation:
+  method: tsne
+  perplexity: 30
+  n_iter: 1000
+  init: pca
+  translation_for_viz: {displacement: 32, direction: right}

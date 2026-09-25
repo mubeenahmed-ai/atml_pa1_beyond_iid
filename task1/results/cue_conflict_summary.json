@@ -1,0 +1,30 @@
+{
+  "generated": 300,
+  "accepted": 284,
+  "rejected": 16,
+  "rejection_rule": {
+    "min_pixel_std": 0.05,
+    "min_edge_corr": 0.3,
+    "min_style_gain": 0.0
+  },
+  "style_strength": 1.0,
+  "per_direction_accepted": {
+    "airplane(shape)/cat(texture)": 24,
+    "cat(shape)/airplane(texture)": 23,
+    "car(shape)/dog(texture)": 24,
+    "dog(shape)/car(texture)": 24,
+    "ship(shape)/horse(texture)": 25,
+    "horse(shape)/ship(texture)": 23,
+    "truck(shape)/bird(texture)": 20,
+    "bird(shape)/truck(texture)": 23,
+    "deer(shape)/monkey(texture)": 24,
+    "monkey(shape)/deer(texture)": 25,
+    "bird(shape)/cat(texture)": 25,
+    "cat(shape)/bird(texture)": 24
+  },
+  "reject_reasons": {
+    "pixel_std": 0,
+    "edge_corr": 5,
+    "style_gain": 11
+  }
+}

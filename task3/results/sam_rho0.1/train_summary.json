@@ -1,0 +1,45 @@
+{
+  "name": "sam_rho0.1",
+  "best_epoch": 22,
+  "best_val_mean_macro_f1": 0.933502444263495,
+  "epochs_run": 27,
+  "steps_per_epoch": 203,
+  "total_steps_run": 5481,
+  "wall_time_s": 554.2,
+  "config": {
+    "seed": 6304,
+    "device": "cuda",
+    "data": {
+      "parquet": "data/pacs/pacs.parquet",
+      "splits": "shared/splits/pacs_sketch_seed6304.json",
+      "n_classes": 7,
+      "sources": [
+        "photo",
+        "art_painting",
+        "cartoon"
+      ],
+      "target": "sketch"
+    },
+    "train": {
+      "per_domain_batch": 8,
+      "target_batch": 24,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "max_epochs": 30,
+      "patience": 5,
+      "num_workers": 4,
+      "log_every": 20,
+      "bn_policy": "frozen_running_stats"
+    },
+    "results_root": "task3/results",
+    "diagnostics": {
+      "sharpness_rho": 0.05,
+      "sharpness_batch_per_domain": 32
+    },
+    "name": "sam_rho0.1",
+    "method": {
+      "type": "sam",
+      "rho": 0.1
+    }
+  }
+}

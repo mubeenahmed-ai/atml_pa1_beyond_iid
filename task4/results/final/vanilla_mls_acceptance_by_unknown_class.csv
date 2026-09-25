@@ -1,0 +1,17 @@
+unknown_class,n,accepted_frac,top_absorbing_known,top_absorbing_frac_of_accepted,group
+pickup_truck,100,0.91,automobile,0.6483516483516484,near
+bus,100,0.8,truck,0.8125,near
+wolf,100,0.8,cat,0.45,near
+leopard,100,0.67,cat,0.4626865671641791,near
+fox,100,0.66,cat,0.42424242424242425,near
+camel,100,0.61,deer,0.29508196721311475,near
+tractor,100,0.54,truck,0.8333333333333334,near
+motorcycle,100,0.43,automobile,0.5581395348837209,near
+wardrobe,100,0.59,truck,0.7288135593220338,far
+clock,100,0.54,cat,0.3148148148148148,far
+mushroom,100,0.48,bird,0.4166666666666667,far
+bowl,100,0.44,cat,0.29545454545454547,far
+chair,100,0.43,airplane,0.6744186046511628,far
+sunflower,100,0.42,bird,0.47619047619047616,far
+keyboard,100,0.4,airplane,0.275,far
+bottle,100,0.31,ship,0.3548387096774194,far

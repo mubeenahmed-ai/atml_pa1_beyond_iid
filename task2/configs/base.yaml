@@ -1,0 +1,20 @@
+# Shared PACS protocol (Tasks 2 and 3). Method configs override `name` and `method`.
+seed: 6304
+device: cuda
+data:
+  parquet: data/pacs/pacs.parquet
+  splits: shared/splits/pacs_sketch_seed6304.json
+  n_classes: 7
+  sources: [photo, art_painting, cartoon]
+  target: sketch
+train:
+  per_domain_batch: 8        # 8 x 3 source domains = 24 source images per step
+  target_batch: 24           # Task 2 only: 24 unlabelled Sketch images per step
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  max_epochs: 30
+  patience: 5                # epochs without improved mean source-val macro-F1
+  num_workers: 4
+  log_every: 20
+  bn_policy: frozen_running_stats   # running mean/var fixed at ImageNet; gamma/beta trainable
+results_root: task2/results
